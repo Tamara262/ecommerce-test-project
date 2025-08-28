@@ -1,31 +1,19 @@
--- Datos iniciales para las tablas
+-- Inserción de datos de prueba en la base de datos E-commerce
 
-INSERT INTO users VALUES
-(1, 'Ana López', 'ana@mail.com', '1234', '2023-01-10'),
-(2, 'Carlos Pérez', 'carlos@mail.com', '1234', '2023-02-15'),
-(3, 'María Gómez', 'maria@mail.com', '1234', '2023-03-20');
+-- Usuarios
+INSERT INTO users (id, name, email, password) VALUES
+(1, 'Juan Pérez', 'juan@mail.com', '1234'),
+(2, 'Ana Torres', 'ana@mail.com', '1234'),
+(3, 'Luis Gómez', 'luis@mail.com', 'abcd');
 
-INSERT INTO categories VALUES
-(1, 'Electrónica'),
-(2, 'Ropa'),
-(3, 'Hogar');
+-- Productos
+INSERT INTO products (id, name, price, stock) VALUES
+(1, 'Laptop HP', 12000.00, 5),
+(2, 'Camisa Blanca', 450.00, 10),
+(3, 'Teléfono Samsung', 8000.00, 3);
 
-INSERT INTO products VALUES
-(1, 'Laptop', 1200.00, 10, 1),
-(2, 'Smartphone', 800.00, 5, 1),
-(3, 'Camiseta', 20.00, 50, 2),
-(4, 'Silla', 100.00, 20, 3);
-
-INSERT INTO orders VALUES
-(1, 1, '2023-04-01', 1220.00, 'Completado'),
-(2, 2, '2023-04-05', 820.00, 'Pendiente');
-
-INSERT INTO order_items VALUES
-(1, 1, 1, 1, 1200.00),
-(2, 1, 3, 1, 20.00),
-(3, 2, 2, 1, 800.00),
-(4, 2, 3, 1, 20.00);
-
-INSERT INTO payments VALUES
-(1, 1, 1220.00, '2023-04-02', 'Tarjeta de crédito'),
-(2, 2, 820.00, '2023-04-06', 'PayPal');
+-- Órdenes
+INSERT INTO orders (id, user_id, product_id, quantity, total, status) VALUES
+(1, 1, 2, 2, 900.00, 'Completado'),
+(2, 2, 1, 1, 12000.00, 'Pendiente'),
+(3, 3, 3, 1, 8000.00, 'Completado');

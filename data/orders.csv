@@ -1,0 +1,4 @@
+id,user_id,product_id,quantity,total,status
+1,1,2,2,900,Completado
+2,2,1,1,12000,Pendiente
+3,3,3,1,8000,Completado
